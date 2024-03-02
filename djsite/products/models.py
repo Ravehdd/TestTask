@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Product(models.Model):
     name = models.CharField(max_length=255, null=False)
     start_time = models.DateTimeField(null=False, blank=True)
-    price = models.FloatField(null=False)
+    price = models.IntegerField(null=False)
     max_users = models.IntegerField(null=False)
     min_users = models.IntegerField(null=False)
 
@@ -19,10 +19,14 @@ class Lesson(models.Model):
     video_link = models.URLField(null=False, max_length=512)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.name
+
 
 class Group(models.Model):
     name = models.CharField(max_length=255, null=False)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    count_members = models.IntegerField(default=0)
 
 
 class GroupUsers(models.Model):

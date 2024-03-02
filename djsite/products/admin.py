@@ -3,7 +3,7 @@ from django.utils.safestring import mark_safe
 
 from .models import *
 
-#oaoaoaoaooaoaoa
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("name", "price", "start_time", "max_users", "min_users")
 
