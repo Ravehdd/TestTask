@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e42359e-a35c-4d7a-9a3d-201445c566aa" name="Changes" comment="прописал струткуру бд, +- настроил админ панель, настроил авторизацию">
-      <change afterPath="$PROJECT_DIR$/djsite/products/serializers.py" afterDir="false" />
+    <list default="true" id="6e42359e-a35c-4d7a-9a3d-201445c566aa" name="Changes" comment="покупка продукта, базовое создание групп, добавление в группы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djsite/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djsite/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djsite/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/products/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djsite/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/products/views.py" afterDir="false" />
     </list>
@@ -76,7 +73,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709216897787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="покупка продукта, базовое создание групп, добавление в группы">
+      <option name="closed" value="true" />
+      <created>1709367774368</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709367774368</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="прописал струткуру бд, +- настроил админ панель, настроил авторизацию" />
-    <option name="LAST_COMMIT_MESSAGE" value="прописал струткуру бд, +- настроил админ панель, настроил авторизацию" />
+    <MESSAGE value="покупка продукта, базовое создание групп, добавление в группы" />
+    <option name="LAST_COMMIT_MESSAGE" value="покупка продукта, базовое создание групп, добавление в группы" />
   </component>
 </project>
