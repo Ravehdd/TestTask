@@ -63,6 +63,8 @@ class ProductListAPIView(APIView):
                         return Response({"response": "You have been successfully added to the group"})
                 self.create_new_group(product, user_id, product_id)
 
+
+
             return Response({"response": f"Successfully! The {product[0]['name']} was purchased!"})
         else:
             return Response({"error": "Something went wrong"})
