@@ -2,6 +2,7 @@ import sqlite3
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import *
+from datetime import datetime, timezone
 
 
 def getUser(request):
@@ -45,6 +46,7 @@ class ProductListAPIView(APIView):
             group = Group.objects.filter(product_id=product_id).values()
             if not group:
                 self.create_new_group(product, user_id, product_id)
+                return Response({"response": "You have been successfully added to the group"})
             elif len(group) == 1:
                 if group[0]["count_members"] < product[0]["max_users"]:
                     GroupUsers.objects.create(group_id=group[0]["id"], user_id=user_id).save()
@@ -56,14 +58,36 @@ class ProductListAPIView(APIView):
 
             elif len(group) > 1:
                 for g in group:
-                    if g["count_members"] < product[0]["max_users"]:
+                    start_time = product[0]["start_time"]
+                    if g["count_members"] == product[0]["max_users"]:
+                        for gr in group:
+                            if gr["count_members"] < product[0]["max_users"] // 2:
+                                if start_time > datetime.now(timezone.utc):
+                                    selected_users = GroupUsers.objects.filter(group_id=g["id"])[:product[0]["max_users"] // 2]
+
+                                    for user in selected_users:
+                                        user.group_id = gr["id"]
+                                        user.save()
+
+                                    members_move = product[0]["max_users"] // 2
+                                    full_group = Group.objects.get(id=g["id"])
+                                    full_group.count_members -= members_move
+                                    full_group.save()
+                                    empty_group = Group.objects.get(id=gr["id"])
+                                    empty_group.count_members += members_move + 1
+                                    empty_group.save()
+
+                                    GroupUsers.objects.create(group_id=gr["id"], user_id=user_id).save()
+                                    gr["count_members"] += 1
+                                    return Response({"response": "You have been successfully added to the group"})
+
+
+                    elif g["count_members"] < product[0]["max_users"]:
                         GroupUsers.objects.create(group_id=g["id"], user_id=user_id).save()
                         g["count_members"] += 1
                         Group.objects.filter(id=g["id"]).update(count_members=g["count_members"])
                         return Response({"response": "You have been successfully added to the group"})
                 self.create_new_group(product, user_id, product_id)
-
-
 
             return Response({"response": f"Successfully! The {product[0]['name']} was purchased!"})
         else:

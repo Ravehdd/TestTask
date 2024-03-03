@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e42359e-a35c-4d7a-9a3d-201445c566aa" name="Changes" comment="добавил доступные курсы, немного доработал добавление в группы">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="6e42359e-a35c-4d7a-9a3d-201445c566aa" name="Changes" comment="добавил readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djsite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djsite/djsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/djsite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djsite/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djsite/products/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709370118458</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="добавил readme">
+      <option name="closed" value="true" />
+      <created>1709374314027</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709374314027</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +118,7 @@
     <MESSAGE value="прописал струткуру бд, +- настроил админ панель, настроил авторизацию" />
     <MESSAGE value="покупка продукта, базовое создание групп, добавление в группы" />
     <MESSAGE value="добавил доступные курсы, немного доработал добавление в группы" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил доступные курсы, немного доработал добавление в группы" />
+    <MESSAGE value="добавил readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил readme" />
   </component>
 </project>
